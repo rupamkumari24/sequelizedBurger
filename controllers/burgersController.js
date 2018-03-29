@@ -45,7 +45,7 @@ router.get('/index', function (req, res) {
 
 
 // Create a New Burger
-router.post('/burger/create', function (req, res) {
+router.post('/burgers/create', function (req, res) {
 
   // Sequelize Query to add new burger to database
   models.burgers.create(
@@ -63,7 +63,7 @@ router.post('/burger/create', function (req, res) {
 
 
 // Devour a Burger
-router.post('/burger/eat/:id', function (req, res) {
+router.post('/burgers/eat/:id', function (req, res) {
 
   // If not name was added, make it "Anonymous"
   if(req.body.burgerEater == "" || req.body.burgerEater == null){

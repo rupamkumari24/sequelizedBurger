@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // This does not need to be included, the hasOne() function in the burger model takes care of it
-        // devourers.belongsTo(models.burgers);
+        devourers.belongsTo(models.burgers);
       }
     }
   });
