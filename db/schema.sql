@@ -18,8 +18,8 @@ CREATE TABLE devourers
 	id int NOT NULL AUTO_INCREMENT,
 	devourer_name varchar(255) NOT NULL,
 	burgerId int NOT NULL,
-	createdAt DateTime NOT NULL,
-	updatedAt DateTime NOT NULL,
+	createdAt TIMESTAMP NOT NULL,
+	updatedAt TIMESTAMP NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (burgerId) REFERENCES burgers(id)
 );

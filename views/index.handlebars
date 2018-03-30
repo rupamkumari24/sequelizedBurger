@@ -11,7 +11,7 @@
         <!-- Dynamically Insert Ready Burgers Here -->
         {{#each burgers}}
           {{#unless devoured}}
-            <form action="burger/eat/{{id}}" method="POST">
+            <form action="burgers/eat/{{id}}" method="POST">
               <div class="input-group col-md-12 col-xs-12">
                 <li class="form-control">
                  <div class="col-md-7 col-xs-7">{{id}}. {{burger_name}}</div>

@@ -13,15 +13,16 @@ module.exports = {
       },
       devoured: {
         type: Sequelize.BOOLEAN
+      }// Foreign key usage (added manually)
+      devourerId: {
+          type: Sequelize.INTEGER,
+          references: {
+              model: 'devourers',
+              key: 'id'
+          },
+          onUpdate: 'cascade',
+          onDelete: 'cascade'
       },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
     });
   },
   down: function(queryInterface, Sequelize) {
